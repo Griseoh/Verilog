@@ -1,0 +1,109 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000203f6c56ab0 .scope module, "autest" "autest" 2 3;
+ .timescale 0 0;
+v00000203f6ca44e0_0 .var "a", 15 0;
+v00000203f6ca5700_0 .var "b", 15 0;
+v00000203f6ca43a0_0 .net "c", 15 0, L_00000203f6ca5340;  1 drivers
+v00000203f6ca4440_0 .net "cy", 0 0, L_00000203f6ca4300;  1 drivers
+v00000203f6ca52a0_0 .net "p", 0 0, L_00000203f6ca4d00;  1 drivers
+v00000203f6ca5de0_0 .net "s", 0 0, L_00000203f6ca46c0;  1 drivers
+v00000203f6ca4620_0 .net "v", 0 0, L_00000203f6c4d4b0;  1 drivers
+v00000203f6ca5160_0 .net "zr", 0 0, L_00000203f6ca5a20;  1 drivers
+S_00000203f6c56c40 .scope module, "dut" "au" 2 9, 3 1 0, S_00000203f6c56ab0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "A";
+    .port_info 1 /INPUT 16 "B";
+    .port_info 2 /OUTPUT 16 "C";
+    .port_info 3 /OUTPUT 1 "sign";
+    .port_info 4 /OUTPUT 1 "zero";
+    .port_info 5 /OUTPUT 1 "carry";
+    .port_info 6 /OUTPUT 1 "parity";
+    .port_info 7 /OUTPUT 1 "overflow";
+L_00000203f6c4d280 .functor AND 1, L_00000203f6ca4760, L_00000203f6ca57a0, C4<1>, C4<1>;
+L_00000203f6c4d1a0 .functor NOT 1, L_00000203f6ca4e40, C4<0>, C4<0>, C4<0>;
+L_00000203f6c4d600 .functor AND 1, L_00000203f6c4d280, L_00000203f6c4d1a0, C4<1>, C4<1>;
+L_00000203f6c4d520 .functor NOT 1, L_00000203f6ca4580, C4<0>, C4<0>, C4<0>;
+L_00000203f6c4d3d0 .functor NOT 1, L_00000203f6ca4bc0, C4<0>, C4<0>, C4<0>;
+L_00000203f6c4d440 .functor AND 1, L_00000203f6c4d520, L_00000203f6c4d3d0, C4<1>, C4<1>;
+L_00000203f6c4d2f0 .functor AND 1, L_00000203f6c4d440, L_00000203f6ca58e0, C4<1>, C4<1>;
+L_00000203f6c4d4b0 .functor OR 1, L_00000203f6c4d600, L_00000203f6c4d2f0, C4<0>, C4<0>;
+v00000203f6c4c7a0_0 .net "A", 15 0, v00000203f6ca44e0_0;  1 drivers
+v00000203f6c4bc60_0 .net "B", 15 0, v00000203f6ca5700_0;  1 drivers
+v00000203f6c4bd00_0 .net "C", 15 0, L_00000203f6ca5340;  alias, 1 drivers
+L_00000203f6cae0a0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000203f6c4bee0_0 .net *"_ivl_10", 0 0, L_00000203f6cae0a0;  1 drivers
+v00000203f6c4bb20_0 .net *"_ivl_11", 16 0, L_00000203f6ca5d40;  1 drivers
+v00000203f6c4c0c0_0 .net *"_ivl_20", 0 0, L_00000203f6ca4760;  1 drivers
+v00000203f6c4c8e0_0 .net *"_ivl_22", 0 0, L_00000203f6ca57a0;  1 drivers
+v00000203f6c4c200_0 .net *"_ivl_23", 0 0, L_00000203f6c4d280;  1 drivers
+v00000203f6c4c840_0 .net *"_ivl_26", 0 0, L_00000203f6ca4e40;  1 drivers
+v00000203f6c4bda0_0 .net *"_ivl_27", 0 0, L_00000203f6c4d1a0;  1 drivers
+v00000203f6c4be40_0 .net *"_ivl_29", 0 0, L_00000203f6c4d600;  1 drivers
+v00000203f6c4c340_0 .net *"_ivl_3", 16 0, L_00000203f6ca4f80;  1 drivers
+v00000203f6c4c520_0 .net *"_ivl_32", 0 0, L_00000203f6ca4580;  1 drivers
+v00000203f6c4ca20_0 .net *"_ivl_33", 0 0, L_00000203f6c4d520;  1 drivers
+v00000203f6c4c3e0_0 .net *"_ivl_36", 0 0, L_00000203f6ca4bc0;  1 drivers
+v00000203f6c4c160_0 .net *"_ivl_37", 0 0, L_00000203f6c4d3d0;  1 drivers
+v00000203f6c4bbc0_0 .net *"_ivl_39", 0 0, L_00000203f6c4d440;  1 drivers
+v00000203f6c4c5c0_0 .net *"_ivl_42", 0 0, L_00000203f6ca58e0;  1 drivers
+v00000203f6c4c660_0 .net *"_ivl_43", 0 0, L_00000203f6c4d2f0;  1 drivers
+L_00000203f6cae058 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000203f6c4c020_0 .net *"_ivl_6", 0 0, L_00000203f6cae058;  1 drivers
+v00000203f6c4c480_0 .net *"_ivl_7", 16 0, L_00000203f6ca48a0;  1 drivers
+v00000203f6c4c2a0_0 .net "carry", 0 0, L_00000203f6ca4300;  alias, 1 drivers
+v00000203f6c4c700_0 .net "overflow", 0 0, L_00000203f6c4d4b0;  alias, 1 drivers
+v00000203f6ca4da0_0 .net "parity", 0 0, L_00000203f6ca4d00;  alias, 1 drivers
+v00000203f6ca4ee0_0 .net "sign", 0 0, L_00000203f6ca46c0;  alias, 1 drivers
+v00000203f6ca55c0_0 .net "zero", 0 0, L_00000203f6ca5a20;  alias, 1 drivers
+L_00000203f6ca4300 .part L_00000203f6ca5d40, 16, 1;
+L_00000203f6ca5340 .part L_00000203f6ca5d40, 0, 16;
+L_00000203f6ca4f80 .concat [ 16 1 0 0], v00000203f6ca44e0_0, L_00000203f6cae058;
+L_00000203f6ca48a0 .concat [ 16 1 0 0], v00000203f6ca5700_0, L_00000203f6cae0a0;
+L_00000203f6ca5d40 .arith/sum 17, L_00000203f6ca4f80, L_00000203f6ca48a0;
+L_00000203f6ca46c0 .part L_00000203f6ca5340, 15, 1;
+L_00000203f6ca5a20 .reduce/nor L_00000203f6ca5340;
+L_00000203f6ca4d00 .reduce/xnor L_00000203f6ca5340;
+L_00000203f6ca4760 .part v00000203f6ca44e0_0, 15, 1;
+L_00000203f6ca57a0 .part v00000203f6ca5700_0, 15, 1;
+L_00000203f6ca4e40 .part L_00000203f6ca5340, 15, 1;
+L_00000203f6ca4580 .part v00000203f6ca44e0_0, 15, 1;
+L_00000203f6ca4bc0 .part v00000203f6ca5700_0, 15, 1;
+L_00000203f6ca58e0 .part L_00000203f6ca5340, 15, 1;
+    .scope S_00000203f6c56ab0;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "Adderunit.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000203f6c56ab0 {0 0 0};
+    %vpi_call 2 16 "$monitor", $time, "a=%h, b=%h, c=%h, s=%b, zr=%b, cy=%b, p=%b, v=%b", v00000203f6ca44e0_0, v00000203f6ca5700_0, v00000203f6ca43a0_0, v00000203f6ca5de0_0, v00000203f6ca5160_0, v00000203f6ca4440_0, v00000203f6ca52a0_0, v00000203f6ca4620_0 {0 0 0};
+    %delay 5, 0;
+    %pushi/vec4 36863, 0, 16;
+    %store/vec4 v00000203f6ca44e0_0, 0, 16;
+    %pushi/vec4 32768, 0, 16;
+    %store/vec4 v00000203f6ca5700_0, 0, 16;
+    %delay 5, 0;
+    %pushi/vec4 65534, 0, 16;
+    %store/vec4 v00000203f6ca44e0_0, 0, 16;
+    %pushi/vec4 2, 0, 16;
+    %store/vec4 v00000203f6ca5700_0, 0, 16;
+    %delay 5, 0;
+    %pushi/vec4 43690, 0, 16;
+    %store/vec4 v00000203f6ca44e0_0, 0, 16;
+    %pushi/vec4 21845, 0, 16;
+    %store/vec4 v00000203f6ca5700_0, 0, 16;
+    %delay 5, 0;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "Adderunit_tb.v";
+    "./Adderunit.v";

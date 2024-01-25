@@ -1,0 +1,207 @@
+$date
+	Tue Sep 26 15:12:57 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module Comparator2bit_tb $end
+$var wire 6 ! Y [5:0] $end
+$var reg 2 " A [1:0] $end
+$var reg 2 # B [1:0] $end
+$scope module uut $end
+$var wire 2 $ A [1:0] $end
+$var wire 2 % B [1:0] $end
+$var wire 6 & w1 [5:0] $end
+$var wire 6 ' w0 [5:0] $end
+$var wire 6 ( Y [5:0] $end
+$scope module Cm0 $end
+$var wire 1 ) A $end
+$var wire 1 * B $end
+$var wire 6 + Y [5:0] $end
+$upscope $end
+$scope module Cm1 $end
+$var wire 1 , A $end
+$var wire 1 - B $end
+$var wire 6 . Y [5:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx .
+x-
+x,
+bx +
+x*
+x)
+bx (
+bx '
+bx &
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#2
+b100011 !
+b100011 (
+b100011 '
+b100011 +
+b100011 &
+b100011 .
+0*
+0-
+0)
+0,
+b0 #
+b0 %
+b0 "
+b0 $
+#4
+b10101 !
+b10101 (
+b10101 '
+b10101 +
+1*
+b1 #
+b1 %
+#6
+b100011 '
+b100011 +
+b10101 &
+b10101 .
+0*
+1-
+b10 #
+b10 %
+#8
+b10101 '
+b10101 +
+1*
+b11 #
+b11 %
+#10
+b11010 !
+b11010 (
+b100011 &
+b100011 .
+b11010 '
+b11010 +
+0*
+0-
+1)
+b0 #
+b0 %
+b1 "
+b1 $
+#12
+b100011 !
+b100011 (
+b100011 '
+b100011 +
+1*
+b1 #
+b1 %
+#14
+b10101 !
+b10101 (
+b11010 '
+b11010 +
+b10101 &
+b10101 .
+0*
+1-
+b10 #
+b10 %
+#16
+b100011 '
+b100011 +
+1*
+b11 #
+b11 %
+#18
+b11010 !
+b11010 (
+b100011 '
+b100011 +
+b11010 &
+b11010 .
+0*
+0-
+0)
+1,
+b0 #
+b0 %
+b10 "
+b10 $
+#20
+b10101 '
+b10101 +
+1*
+b1 #
+b1 %
+#22
+b100011 !
+b100011 (
+b100011 '
+b100011 +
+b100011 &
+b100011 .
+0*
+1-
+b10 #
+b10 %
+#24
+b10101 !
+b10101 (
+b10101 '
+b10101 +
+1*
+b11 #
+b11 %
+#26
+b11010 !
+b11010 (
+b11010 &
+b11010 .
+b11010 '
+b11010 +
+0*
+0-
+1)
+b0 #
+b0 %
+b11 "
+b11 $
+#28
+b100011 '
+b100011 +
+1*
+b1 #
+b1 %
+#30
+b11010 '
+b11010 +
+b100011 &
+b100011 .
+0*
+1-
+b10 #
+b10 %
+#32
+b100011 !
+b100011 (
+b100011 '
+b100011 +
+1*
+b11 #
+b11 %
+#40

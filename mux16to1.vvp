@@ -1,0 +1,52 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000282261390e0 .scope module, "muxtest" "muxtest" 2 2;
+ .timescale 0 0;
+v000002822613ae70_0 .var "A", 15 0;
+v000002822613af10_0 .var "B", 3 0;
+v0000028226186040_0 .net "F", 0 0, L_00000282261860e0;  1 drivers
+S_0000028226185eb0 .scope module, "uut" "mux16to1" 2 6, 3 1 0, S_00000282261390e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "in";
+    .port_info 1 /INPUT 4 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v0000028226137590_0 .net "in", 15 0, v000002822613ae70_0;  1 drivers
+v0000028226152dc0_0 .net "out", 0 0, L_00000282261860e0;  alias, 1 drivers
+v0000028226139270_0 .net "sel", 3 0, v000002822613af10_0;  1 drivers
+L_00000282261860e0 .part/v v000002822613ae70_0, v000002822613af10_0, 1;
+    .scope S_00000282261390e0;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "mux16to1.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000282261390e0 {0 0 0};
+    %vpi_call 2 13 "$monitor", $time, "A = %h, B = %h, F =%b", v000002822613ae70_0, v000002822613af10_0, v0000028226186040_0 {0 0 0};
+    %delay 5, 0;
+    %pushi/vec4 16138, 0, 16;
+    %store/vec4 v000002822613ae70_0, 0, 16;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v000002822613af10_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v000002822613af10_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v000002822613af10_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v000002822613af10_0, 0, 4;
+    %delay 5, 0;
+    %vpi_call 2 19 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux16to1_tb.v";
+    "./mux16to1.v";
